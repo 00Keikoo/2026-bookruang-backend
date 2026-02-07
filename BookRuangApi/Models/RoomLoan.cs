@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BookRuangApi.Models{
 	public class RoomLoan{
-		public int Id{get; set; }
+		public int Id {get; set; }
 
 		[Required]
 		public string BorrowerName {get; set; }
@@ -11,10 +11,11 @@ namespace BookRuangApi.Models{
 		[Required]
 		public string RoomName {get; set; }
 
-		public string Purpose {get; set; }
-
-		public DateTime Date {get; set; }
+		[Required]
+		public string Purpose {get; set;} 
 
 		public string Status {get; set; } = "Pending";
+
+		public DateTime Date {get; set; } = DateTime.Now;
 	}
 }
