@@ -8,10 +8,25 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Database(SQLite)
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite("Data Source=bookruang.db"));
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",policy =>
+    {
+       policy.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader(); 
+    });
+});
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 // Configure pipeline
 if (app.Environment.IsDevelopment())
@@ -21,6 +36,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthorization();
 
 app.MapControllers();
 
