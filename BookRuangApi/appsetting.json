@@ -8,5 +8,11 @@
   "AllowedHosts": "*",
   "ConnectionStrings": {
     "DefaultConnection": "Data Source=bookruang.db"
+  },
+  "JwtSettings": {
+    "SecretKey": "YourSuperSecretKeyThatIsAtLeast32CharactersLongForProduction!",
+    "Issuer": "BookRuangApi",
+    "Audience": "BookRuangApp",
+    "ExpirationDays": 7
   }
 }
