@@ -13,3 +13,7 @@
 - Update RoomLoan model dengan status fields
 - Add DTOs for better API structure
 
+## v1.2.0
+- Add login feature
+- Add Authorization
+- Add role user and admin

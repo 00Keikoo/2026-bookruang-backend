@@ -7,7 +7,7 @@ Backend API untuk sistem manajemen RoomLoan dengan ASP.NET Core dan SQLite
 - Buat peminjaman ruang
 - Lihat daftar pinjaman
 - Lihat detail pinjaman
-- Update pinjmana
+- Update pinjman
 - Hapus pinjaman
 
 # Tech Stack 
